@@ -1,0 +1,494 @@
+:root {
+  --text-color: white;
+  --primary-color: rgb(253, 30, 30);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  color: #141414;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.container {
+  position: relative;
+  margin: 6rem auto 0;
+}
+
+.card-container {
+  width: 85%;
+  max-width: 350px;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+
+  position: absolute;
+  top: -4rem;
+}
+
+.card-front,
+.card-back {
+  transform-style: preserve-3d;
+  display: block;
+  transition: transform 1.3s ease-in;
+  position: relative;
+  z-index: 10;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  z-index: 9;
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.reverse-flip {
+  transform: rotateY(0);
+}
+
+.card-bg {
+  display: block;
+  position: absolute;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-item {
+  position: absolute;
+  z-index: 8;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.card-item > div:first-child {
+  display: grid;
+  grid-gap: 0.3rem;
+  grid-template-columns: 1fr;
+}
+
+.card-item > div:last-child {
+  display: grid;
+
+  grid-gap: 0.3rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chip-debit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 420px;
+  width: 100%;
+  margin-left: 0.4rem;
+}
+
+.name-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debit {
+  font-size: 10px;
+}
+
+.card-expire-date {
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.card-expire-date p:first-child {
+  margin-right: 0.4rem;
+}
+
+.card-expire-date p:last-child {
+  font-size: 12px;
+}
+
+.card-number-container > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.number-initial {
+  font-size: 7px;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  margin-bottom: -0.4rem;
+  height: 2.7rem;
+  width: 100%;
+
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.bank-logo {
+  width: 74px;
+  justify-self: right;
+}
+
+.chip {
+  width: 35px;
+  display: block;
+}
+
+.card-holder-name {
+  font-size: 13px;
+}
+
+.visa-logo {
+  width: 55px;
+}
+
+/* Back of card */
+
+.tel {
+  font-size: 0.45rem;
+}
+
+.black {
+  height: 1.8rem;
+  background-color: black;
+}
+
+.auth {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.auth p:first-child {
+  font-size: 0.4rem;
+  text-transform: uppercase;
+}
+
+.auth p:last-child {
+  font-size: 0.38rem;
+}
+
+.white {
+  height: 1.3rem;
+  background-color: var(--text-color);
+  color: #141414;
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 160px;
+}
+
+.three-digit {
+  margin-right: 0.4rem;
+  font-style: italic;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.4rem;
+  font-size: 0.3rem;
+  margin-top: 0.7rem;
+  width: 100%;
+}
+
+.description > p:last-child {
+  font-size: 0.4rem;
+  align-self: flex-end;
+}
+
+.download {
+  font-size: 0.4rem;
+  border-left: 1px solid var(--text-color);
+  padding-left: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.laptop {
+  width: 1.3rem;
+}
+
+.phone {
+  width: 0.9rem;
+}
+
+.form-group {
+  display: grid;
+  grid-gap: 0.5rem;
+  width: 95%;
+  padding: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-detail:first-child {
+  margin-top: 130px;
+}
+
+.form-control {
+  position: relative;
+  padding-top: 0.8rem;
+}
+
+.box {
+  border: none;
+  outline: none;
+  padding: 0.3rem 0;
+  width: 100%;
+  border-bottom: 2px solid #141414;
+  transition: border-bottom 400ms;
+}
+
+label {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  pointer-events: none;
+  transition: top 400ms;
+}
+
+.box:focus + label,
+.box:valid + label {
+  top: -0.3rem;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.incorrect {
+  top: -0.3rem;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.box:focus,
+.box:valid {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+@media screen and (min-width: 360px) {
+  .debit {
+    font-size: 12px;
+  }
+
+  .card-expire-date {
+    font-size: 8px;
+  }
+
+  .card-expire-date p:first-child {
+    margin-right: 0.4rem;
+  }
+
+  .card-expire-date p:last-child {
+    font-size: 12px;
+  }
+
+  .number-initial {
+    font-size: 10px;
+  }
+
+  .card-number {
+    font-size: 1.7rem;
+  }
+
+  .bank-logo {
+    width: 85px;
+  }
+
+  .chip {
+    width: 45px;
+  }
+
+  .card-holder-name {
+    font-size: 15px;
+  }
+
+  .visa-logo {
+    width: 65px;
+  }
+
+  .form-detail:first-child {
+    margin-top: 180px;
+  }
+
+  /* Back of phone */
+  .tel {
+    font-size: 0.51rem;
+  }
+
+  .black {
+    height: 2.3rem;
+  }
+
+  .auth p:first-child {
+    font-size: 0.5rem;
+  }
+
+  .auth p:last-child {
+    font-size: 0.38rem;
+  }
+
+  .white {
+    height: 1.7rem;
+    font-size: 0.5rem;
+    width: 180px;
+  }
+
+  .three-digit {
+    margin-right: 0.4rem;
+    font-style: italic;
+  }
+
+  .description {
+    grid-gap: 0.4rem;
+    font-size: 0.379rem;
+    margin-top: 0.7rem;
+  }
+
+  .description > p:last-child {
+    font-size: 0.5rem;
+  }
+
+  .download {
+    font-size: 0.4rem;
+  }
+
+  .laptop {
+    width: 1.5rem;
+  }
+
+  .phone {
+    width: 1rem;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .debit {
+    font-size: 12px;
+  }
+
+  .card-expire-date {
+    font-size: 9px;
+  }
+
+  .card-expire-date p:first-child {
+    margin-right: 0.4rem;
+  }
+
+  .card-expire-date p:last-child {
+    font-size: 12px;
+  }
+
+  .number-initial {
+    font-size: 10px;
+  }
+
+  .card-number {
+    font-size: 1.8rem;
+    justify-self: flex-start;
+  }
+
+  .bank-logo {
+    width: 100px;
+  }
+
+  .chip {
+    width: 50px;
+  }
+
+  .card-holder-name {
+    font-size: 17px;
+  }
+
+  .visa-logo {
+    width: 80px;
+  }
+
+  .form-detail:first-child {
+    margin-top: 180px;
+  }
+
+  /* Back of form */
+
+  .tel {
+    font-size: 0.6rem;
+  }
+
+  .black {
+    height: 3rem;
+  }
+
+  .auth p:first-child {
+    font-size: 0.5rem;
+  }
+
+  .auth p:last-child {
+    font-size: 0.4rem;
+  }
+
+  .white {
+    height: 2rem;
+    font-size: 0.8rem;
+    width: 200px;
+  }
+
+  .three-digit {
+    margin-right: 0.4rem;
+  }
+
+  .description {
+    font-size: 0.4rem;
+    margin-top: 1.3rem;
+    width: 100%;
+  }
+
+  .description > p:last-child {
+    font-size: 0.5rem;
+  }
+
+  .download {
+    font-size: 0.4rem;
+    padding-left: 0.4rem;
+  }
+
+  .laptop {
+    width: 1.5rem;
+  }
+
+  .phone {
+    width: 1rem;
+  }
+}

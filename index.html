@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Card Creator</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card-container">
+            <div class="card-front">
+                <img src="./images/bg.jpg" alt="card image" class="card-bg">
+                <div class="card-item">
+                    <div>
+                        <img src="./images/UBA-logo.png" alt="logo" class="bank-logo">
+                        <div class="chip-debit">
+                            <img src="./images/chip.png" alt="card-chip" class="chip">
+                            <p class="debit">Debit</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card-number-container">
+                            <p class="card-number"></p>
+                            <div>
+                                <div class="number-initial"></div>
+                                <div class="card-expire-date">
+                                    <p>Expire
+                                        <br>
+                                        End of
+                                    </p>
+                                    <p class="card-date"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="name-logo">
+                            <p class="card-holder-name"></p>
+                            <img src="./images/visa.png" alt="visa-logo" class="visa-logo">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-back">
+                <img src="./images/bg2.jpg" alt="card image" class="card-bg back-img">
+                <div class="card-item">
+                    <div class="div">
+                        <p class="tel">
+                            tel: +23412808822,
+                            +2348002255822,
+                            +2347002255822 (Toll free in Nigeria)
+                        </p>
+                        <div class="black">
+
+                        </div>
+                        <div class="auth">
+                            <p>authorised signature not valid unless signed</p>
+                            <p>gemelato sgp u11388990</p>
+                        </div>
+                        <div class="white">
+                            <p class="three-digit"></p>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Use this card to enrol on UBA Online Banking platforms to manage your account, check
+                                balance, transfer money, pay bills, buy airtime and do much more
+                            </p>
+                            <div class="download">
+                                <div class="image-phone-laptop">
+                                    <img src="./images/phone.png" alt="phone" class="phone">
+                                    <img src="./images/laptop.png" alt="laptop" class="laptop">
+                                </div>
+                                <p>UBA Online Banking (Download from apps Stores</p>
+                            </div>
+                            <p>
+                                Email: cfc@ubagroup.com <br>
+                                www.ubagroup.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <form class="form-group card-form front">
+                <p class="form-detail"><strong>Front of Card Detail</strong></p>
+                <div class="form-control">
+                    <input type="text" class="name box input-field" required>
+                    <label for="name">Name of Card Holder(Max: 25 characters)</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" class="number box input-field" required>
+                    <label for="cardNumber">Card Number(Max: 16 characters)</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" class="date box input-field" required>
+                    <label for="expireDate">Expire Date(mm/yy)</label>
+                </div>
+                <p class="form-detail"><strong>Back of Card Detail</strong></p>
+                <div class="form-control">
+                    <input type="text" class="three-digit-number input-field box" required>
+                    <label for="threeDegitNumber">Three Digit Number</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script/app.js"></script>
+</body>
+
+</html>
